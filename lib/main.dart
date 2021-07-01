@@ -22,7 +22,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.cyan,
       ),
-      darkTheme: ThemeData.dark(),
+      // darkThemeを設定していない時はthemeModeをdarkにしても、themeで指定された
+      // 値が使われる
+      //darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
