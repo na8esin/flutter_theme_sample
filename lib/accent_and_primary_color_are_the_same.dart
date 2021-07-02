@@ -12,11 +12,7 @@ class ThemeModeController extends StateNotifier<ThemeMode> {
   ThemeModeController(state) : super(state);
 
   change() {
-    if (state == ThemeMode.light) {
-      state = ThemeMode.dark;
-    } else {
-      state = ThemeMode.light;
-    }
+    state = state == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
   }
 }
 
