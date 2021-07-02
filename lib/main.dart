@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
       ),
       // darkThemeを設定していない時はthemeModeをdarkにしても、themeで指定された
       // 値が使われる
-      //darkTheme: ThemeData.dark(),
-      themeMode: ThemeMode.dark,
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.light,
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -104,6 +104,14 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Text(
+              'const color',
+              style: TextStyle(color: Colors.blue),
+            ),
+            Text(
+              'Theme.of(context).primaryColor',
+              style: TextStyle(color: Theme.of(context).primaryColor),
+            )
           ],
         ),
       ),
