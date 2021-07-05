@@ -12,6 +12,7 @@ class MyApp extends HookConsumerWidget {
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue, accentColor: Colors.blue),
       darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.light,
       home: MyHomePage(),
     );
   }
@@ -23,7 +24,16 @@ class MyHomePage extends HookConsumerWidget {
     return Scaffold(
       body: Center(
         child: Card(
-          child: Text('hello'),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: const Text('hello'),
+              ),
+              ElevatedButton(onPressed: () {}, child: Text('button')),
+            ],
+          ),
         ),
       ),
     );
